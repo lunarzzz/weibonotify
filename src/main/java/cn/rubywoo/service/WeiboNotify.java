@@ -38,7 +38,7 @@ public class WeiboNotify {
         properties = new Properties();
         try {
             properties.load(stream);
-            System.setProperty("webdriver.chrome.driver", "~/driver/chromedriver-linux.exe");
+            System.setProperty("webdriver.chrome.driver", "/driver/chromedriver.exe");
         } catch (IOException e) {
             e.printStackTrace();
         }
