@@ -38,6 +38,7 @@ public class WeiboNotify {
         properties = new Properties();
         try {
             properties.load(stream);
+            System.setProperty("webdriver.chrome.driver", "~/driver/chromedriver-linux.exe");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,7 +48,9 @@ public class WeiboNotify {
         // remote webdriver
         while (true) {
             try {
-                WebDriver webDriver = new RemoteWebDriver(new URL(properties.getProperty("webDriver.url")), new ChromeOptions());
+                WebDriver webDriver = new ChromeDriver();
+
+//                WebDriver webDriver = new RemoteWebDriver(new URL(properties.getProperty("webDriver.url")), new ChromeOptions());
                 while (true) {
                     webDriver.get(properties.getProperty("weibo.url"));
                     String title = webDriver.getTitle();
@@ -58,7 +61,7 @@ public class WeiboNotify {
                     if (WeiboNotify.username == null) {
                         WeiboNotify.username = newUsername;
                     } else if (!WeiboNotify.username.equals(newUsername)) {
-                        send("username is change", newUsername);
+                        send("username[" + username + "] is change", newUsername);
                     }
 
                     //
@@ -72,6 +75,7 @@ public class WeiboNotify {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            Thread.sleep(5000);
         }
     }
 
