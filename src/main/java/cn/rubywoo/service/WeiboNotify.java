@@ -50,6 +50,7 @@ public class WeiboNotify {
             try {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--headless");
                 WebDriver webDriver = new ChromeDriver(chromeOptions);
 
 //                WebDriver webDriver = new RemoteWebDriver(new URL(properties.getProperty("webDriver.url")), new ChromeOptions());
