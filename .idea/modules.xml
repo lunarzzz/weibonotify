@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/weibo-notify.iml" filepath="$PROJECT_DIR$/weibo-notify.iml" />
-      <module fileurl="file://$PROJECT_DIR$/weibonotify.iml" filepath="$PROJECT_DIR$/weibonotify.iml" />
-    </modules>
-  </component>
-</project>
