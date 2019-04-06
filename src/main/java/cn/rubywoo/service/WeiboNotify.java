@@ -48,7 +48,9 @@ public class WeiboNotify {
         // remote webdriver
         while (true) {
             try {
-                WebDriver webDriver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--no-sandbox");
+                WebDriver webDriver = new ChromeDriver(chromeOptions);
 
 //                WebDriver webDriver = new RemoteWebDriver(new URL(properties.getProperty("webDriver.url")), new ChromeOptions());
                 while (true) {
