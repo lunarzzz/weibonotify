@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/weibo-notify.iml" filepath="$PROJECT_DIR$/weibo-notify.iml" />
       <module fileurl="file://$PROJECT_DIR$/weibonotify.iml" filepath="$PROJECT_DIR$/weibonotify.iml" />
     </modules>
   </component>
